@@ -1676,6 +1676,10 @@
         <param index="6">User defined</param>
         <param index="7">User defined</param>
       </entry>
+      <entry value="31015" name="MAV_CMD_SET_RNGFND_LPF">
+        <description>A command to set rangefinder filter lowpass and apply immediately.</description>
+        <param index="1">Lowpass cutoff frequency</param>
+      </entry>
       <!-- END of user range (31000 to 31999) -->
     </enum>
     <enum name="MAV_DATA_STREAM">
@@ -3995,10 +3999,6 @@
       <field type="uint8_t" name="target_system">system ID of the target</field>
       <field type="uint8_t" name="target_component">component ID of the target</field>
       <field type="uint16_t" name="sequence">sequence number (must match the one in LOGGING_DATA_ACKED)</field>
-    </message>
-    <message id="269" name="SET_RNGFND_LOWPASS">
-      <description>A command to set rangefinder filter lowpass and apply immediately.</description>
-      <field type="float" name="lowpass_cutoff">lowpass cutoff frequency</field>
     </message>
   </messages>
 </mavlink>
