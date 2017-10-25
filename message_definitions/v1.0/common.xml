@@ -4000,5 +4000,14 @@
       <field type="uint8_t" name="target_component">component ID of the target</field>
       <field type="uint16_t" name="sequence">sequence number (must match the one in LOGGING_DATA_ACKED)</field>
     </message>
+    <message id="269" name="MULTI_BATTERY_STATUS">
+      <description>Message for multi battery status</description>
+      <field type="uint16_t" name="voltage_battery_1" units="mV">1st Battery voltage, in millivolts (1 = 1 millivolt)</field>
+      <field type="int16_t" name="current_battery_1" units="cA">1st Battery current, in 10*milliamperes (1 = 10 milliampere), -1: autopilot does not measure the current</field>
+      <field type="int8_t" name="battery_remaining_1" units="%">1st Battery remaining battery energy: (0%: 0, 100%: 100), -1: autopilot estimate the remaining battery</field>
+      <field type="uint16_t" name="voltage_battery_2" units="mV">2nd Battery voltage, in millivolts (1 = 1 millivolt)</field>
+      <field type="int16_t" name="current_battery_2" units="cA">2nd Battery current, in 10*milliamperes (1 = 10 milliampere), -1: autopilot does not measure the current</field>
+      <field type="int8_t" name="battery_remaining_2" units="%">2nd Battery remaining battery energy: (0%: 0, 100%: 100), -1: autopilot estimate the remaining battery</field>
+    </message>  
   </messages>
 </mavlink>
