@@ -1053,6 +1053,7 @@
       <description>Rangefinder reporting</description>
       <field type="float" name="distance" units="m">distance in meters</field>
       <field type="float" name="voltage" units="V">raw voltage if available, zero otherwise</field>
+      <field type="uint8_t" name="enabled">rangefinder status</field>
     </message>
     <message id="174" name="AIRSPEED_AUTOCAL">
       <description>Airspeed auto-calibration</description>
