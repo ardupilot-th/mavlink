@@ -4008,6 +4008,10 @@
       <field type="uint16_t" name="voltage_battery_2" units="mV">2nd Battery voltage, in millivolts (1 = 1 millivolt)</field>
       <field type="int16_t" name="current_battery_2" units="cA">2nd Battery current, in 10*milliamperes (1 = 10 milliampere), -1: autopilot does not measure the current</field>
       <field type="int8_t" name="battery_remaining_2" units="%">2nd Battery remaining battery energy: (0%: 0, 100%: 100), -1: autopilot estimate the remaining battery</field>
-    </message>  
+    </message>
+    <message id="270" name="RANGEFINDER_ENABLED">
+      <description>Message for multi battery status</description>
+      <field type="uint8_t" name="enabled">rangefinder status</field>
+    </message>
   </messages>
 </mavlink>
