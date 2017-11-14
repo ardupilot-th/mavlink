@@ -1680,6 +1680,10 @@
         <description>A command to set rangefinder filter lowpass and apply immediately.</description>
         <param index="1">Lowpass cutoff frequency</param>
       </entry>
+      <entry value="31016" name="MAV_CMD_GET_OVERRIDE_LOC">
+        <description>A command to request for a manual control override position.</description>
+        <param index="1">This must be 1 to request</param>
+      </entry>
       <!-- END of user range (31000 to 31999) -->
     </enum>
     <enum name="MAV_DATA_STREAM">
@@ -4012,6 +4016,12 @@
     <message id="270" name="RANGEFINDER_ENABLED">
       <description>Message for multi battery status</description>
       <field type="uint8_t" name="enabled">rangefinder status</field>
+    </message>
+    <message id="271" name="MANUAL_OVERRIDE_LOCATION">
+      <description>Location where manual override occurs</description>
+      <field type="int32_t" name="lat" units="degE7">Latitude, expressed as degrees * 1E7</field>
+      <field type="int32_t" name="lon" units="degE7">Longitude, expressed as degrees * 1E7</field>
+      <field type="int32_t" name="relative_alt" units="mm">Relative altitude in meters, expressed as * 1000 (millimeters)</field>
     </message>
   </messages>
 </mavlink>
