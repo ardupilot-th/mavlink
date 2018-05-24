@@ -1684,6 +1684,10 @@
         <description>A command to request for a manual control override position.</description>
         <param index="1">This must be 1 to request</param>
       </entry>
+      <entry value="31017" name="MAV_CMD_FS_BATTERY_OVERRIDE">
+        <description>A command to request for a manual override over battery failsafe RTL.</description>
+        <param index="1">1 for manual override, 2 for RTL</param>
+      </entry>
       <!-- END of user range (31000 to 31999) -->
     </enum>
     <enum name="MAV_DATA_STREAM">
@@ -4022,6 +4026,10 @@
       <field type="int32_t" name="lat" units="degE7">Latitude, expressed as degrees * 1E7</field>
       <field type="int32_t" name="lon" units="degE7">Longitude, expressed as degrees * 1E7</field>
       <field type="int32_t" name="relative_alt" units="mm">Relative altitude in meters, expressed as * 1000 (millimeters)</field>
+    </message>
+    <message id="272" name="BATTERY_FS_WARNING">
+      <description>Send warning to GCS before triggering RTL</description>
+      <field type="uint8_t" name="battery_fs">Battery failsafe status</field>
     </message>
   </messages>
 </mavlink>
