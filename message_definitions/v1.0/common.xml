@@ -1867,6 +1867,18 @@
         <param index="6">User defined</param>
         <param index="7">User defined</param>
       </entry>
+      <entry value="31015" name="MAV_CMD_SET_RNGFND_LPF">
+        <description>A command to set rangefinder filter lowpass and apply immediately.</description>
+        <param index="1">Lowpass cutoff frequency</param>
+      </entry>
+      <entry value="31016" name="MAV_CMD_GET_OVERRIDE_LOC">
+        <description>A command to request for a manual control override position.</description>
+        <param index="1">This must be 1 to request</param>
+      </entry>
+      <entry value="31017" name="MAV_CMD_FS_BATTERY_OVERRIDE">
+        <description>A command to request for a manual override over battery failsafe RTL.</description>
+        <param index="1">1 for manual override, 2 for RTL</param>
+      </entry>
       <!-- END of user range (31000 to 31999) -->
     </enum>
     <enum name="MAV_DATA_STREAM">
@@ -4378,6 +4390,29 @@
       <field type="uint8_t" name="target_system">system ID of the target</field>
       <field type="uint8_t" name="target_component">component ID of the target</field>
       <field type="uint16_t" name="sequence">sequence number (must match the one in LOGGING_DATA_ACKED)</field>
+    </message>
+    <message id="269" name="MULTI_BATTERY_STATUS">
+      <description>Message for multi battery status</description>
+      <field type="uint16_t" name="voltage_battery_1" units="mV">1st Battery voltage, in millivolts (1 = 1 millivolt)</field>
+      <field type="int16_t" name="current_battery_1" units="cA">1st Battery current, in 10*milliamperes (1 = 10 milliampere), -1: autopilot does not measure the current</field>
+      <field type="int8_t" name="battery_remaining_1" units="%">1st Battery remaining battery energy: (0%: 0, 100%: 100), -1: autopilot estimate the remaining battery</field>
+      <field type="uint16_t" name="voltage_battery_2" units="mV">2nd Battery voltage, in millivolts (1 = 1 millivolt)</field>
+      <field type="int16_t" name="current_battery_2" units="cA">2nd Battery current, in 10*milliamperes (1 = 10 milliampere), -1: autopilot does not measure the current</field>
+      <field type="int8_t" name="battery_remaining_2" units="%">2nd Battery remaining battery energy: (0%: 0, 100%: 100), -1: autopilot estimate the remaining battery</field>
+    </message>
+    <message id="270" name="RANGEFINDER_ENABLED">
+      <description>Message for multi battery status</description>
+      <field type="uint8_t" name="enabled">rangefinder status</field>
+    </message>
+    <message id="271" name="MANUAL_OVERRIDE_LOCATION">
+      <description>Location where manual override occurs</description>
+      <field type="int32_t" name="lat" units="degE7">Latitude, expressed as degrees * 1E7</field>
+      <field type="int32_t" name="lon" units="degE7">Longitude, expressed as degrees * 1E7</field>
+      <field type="int32_t" name="relative_alt" units="mm">Relative altitude in meters, expressed as * 1000 (millimeters)</field>
+    </message>
+    <message id="272" name="BATTERY_FS_WARNING">
+      <description>Send warning to GCS before triggering RTL</description>
+      <field type="uint8_t" name="battery_fs">Battery failsafe status</field>
     </message>
     <message id="299" name="WIFI_CONFIG_AP">
       <description>Configure AP SSID and Password.</description>
