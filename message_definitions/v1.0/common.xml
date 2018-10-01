@@ -4031,5 +4031,10 @@
       <description>Send warning to GCS before triggering RTL</description>
       <field type="uint8_t" name="battery_fs">Battery failsafe status</field>
     </message>
+    <message id="273" name="PAYLOAD_SPOOL_STATUS">
+      <description>Send the status of a rope spool that holding the payload</description>
+      <field type="int8_t" name="rotating_direction">Spool rotating direction and power, pos down, neg up</field>
+      <field type="int32_t" name="dropped_length">Spool dropped length</field>
+    </message>
   </messages>
 </mavlink>
