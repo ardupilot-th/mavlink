@@ -4032,9 +4032,20 @@
       <field type="uint8_t" name="battery_fs">Battery failsafe status</field>
     </message>
     <message id="273" name="PAYLOAD_SPOOL_STATUS">
-      <description>Send the status of a rope spool that holding the payload</description>
-      <field type="int8_t" name="rotating_direction">Spool rotating direction and power, pos down, neg up</field>
-      <field type="int32_t" name="dropped_length">Spool dropped length</field>
+      <description>Send the status of a payload motor and spool</description>
+      <field type="uint16_t" name="speed">Motor speed</field>
+      <field type="uint8_t" name="direction">Motor rotating direction</field>
+      <field type="int32_t" name="tempc">Motor temperature (0.1 unit)</field>
+      <field type="uint16_t" name="turn_counts">Motor turn counts</field>
+    </message>
+    <message id="274" name="PAYLOAD_CONTROLLER_STATUS">
+      <description>Send the status of a controller</description>
+      <field type="uint8_t" name="controller_status">Status of controller</field>
+      <field type="uint8_t" name="motor_status">Status of motor</field>
+    </message>
+    <message id="275" name="ATMOSPHERE_TEMP">
+      <description>Send the atmosphere temperature</description>
+      <field type="int32_t" name="atm_temp">Atmosphere temperature (0.1 unit)</field>
     </message>
   </messages>
 </mavlink>
