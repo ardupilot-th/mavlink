@@ -1688,6 +1688,10 @@
         <description>A command to request for a manual override over battery failsafe RTL.</description>
         <param index="1">1 for manual override, 2 for RTL</param>
       </entry>
+      <entry value="31018" name="MAV_CMD_SET_ZERO_SPOOL">
+        <description>A command to set zero point for payload spool.</description>
+        <param index="1">Set 1 for reset to zero</param>
+      </entry>
       <!-- END of user range (31000 to 31999) -->
     </enum>
     <enum name="MAV_DATA_STREAM">
