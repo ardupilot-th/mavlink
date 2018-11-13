@@ -4037,6 +4037,7 @@
       <field type="uint8_t" name="direction">Motor rotating direction</field>
       <field type="int32_t" name="tempc">Motor temperature (0.1 unit)</field>
       <field type="uint16_t" name="turn_counts">Motor turn counts</field>
+      <field type="uint8_t" name="override">Spool limit override status</field>
     </message>
     <message id="274" name="PAYLOAD_CONTROLLER_STATUS">
       <description>Send the status of a controller</description>
