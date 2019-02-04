@@ -4036,5 +4036,9 @@
       <field type="int8_t" name="rotating_direction">Spool rotating direction and power, pos down, neg up</field>
       <field type="int32_t" name="dropped_length">Spool dropped length</field>
     </message>
+    <message id="274" name="WATER_LEVEL_SENSOR">
+      <description>Send water level status to GCS</description>
+      <field type="uint8_t" name="water_level">Water level (1: available, 0: unavailable)</field>
+    </message>
   </messages>
 </mavlink>
