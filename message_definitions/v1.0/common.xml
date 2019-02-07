@@ -1685,8 +1685,12 @@
         <param index="1">This must be 1 to request</param>
       </entry>
       <entry value="31017" name="MAV_CMD_FS_BATTERY_OVERRIDE">
-        <description>A command to request for a manual override over battery failsafe RTL.</description>
-        <param index="1">1 for manual override, 2 for RTL</param>
+        <description>A command to request for a continue or RTL in the event of battery failsafe.</description>
+        <param index="1">1 for continue, 2 for RTL</param>
+      </entry>
+      <entry value="31018" name="MAV_CMD_WATER_OUT_OVERRIDE">
+        <description>A command to request for a continue or RTL in the event of water outage.</description>
+        <param index="1">1 for continue, 2 for RTL</param>
       </entry>
       <!-- END of user range (31000 to 31999) -->
     </enum>
@@ -4039,6 +4043,7 @@
     <message id="274" name="WATER_LEVEL_SENSOR">
       <description>Send water level status to GCS</description>
       <field type="uint8_t" name="water_level">Water level (1: available, 0: unavailable)</field>
+      <field type="int8_t" name="countdown">Out of water action countdown (-1: unavailable other: countdown)</field>
     </message>
   </messages>
 </mavlink>
