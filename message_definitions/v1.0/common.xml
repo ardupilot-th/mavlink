@@ -1879,6 +1879,18 @@
         <description>A command to request for a manual override over battery failsafe RTL.</description>
         <param index="1">1 for manual override, 2 for RTL</param>
       </entry>
+      <!-- 31018 Reserved for tank sensor message -->
+      <entry value="31019" name="MAV_CMD_CONFIGURE_SPRAYER">
+        <description>A command to configure sprayer parameter</description>
+        <param index="1">Target volume per area.</param>
+        <param index="2">a constant of polynomial spray equation.</param>
+        <param index="3">b constant of polynomial spray equation.</param>
+        <param index="4">c constant of polynomial spray equation.</param>
+      </entry>
+      <entry value="31020" name="MAV_CMD_SET_SPRAYER">
+        <description>A command to request to turn sprayer on or off</description>
+        <param index="1">1 on, 0 off</param>
+      </entry>
       <!-- END of user range (31000 to 31999) -->
     </enum>
     <enum name="MAV_DATA_STREAM">
