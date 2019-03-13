@@ -1883,16 +1883,12 @@
         <description>A command to request for a continue or RTL in the event of water outage.</description>
         <param index="1">1 for continue, 2 for RTL</param>
       </entry>
-      <!-- 31018 Reserved for tank sensor message -->
-      <entry value="31019" name="MAV_CMD_CONFIGURE_SPRAYER">
-        <description>A command to configure sprayer parameter</description>
-        <param index="1">Target volume per area.</param>
-        <param index="2">a constant of polynomial spray equation.</param>
-        <param index="3">b constant of polynomial spray equation.</param>
-        <param index="4">c constant of polynomial spray equation.</param>
+      <entry value="31019" name="MAV_CMD_SET_SPRAYER_RUN">
+        <description>A command to run sprayer libraries</description>
+        <param index="1">1 on, 0 off</param>
       </entry>
-      <entry value="31020" name="MAV_CMD_SET_SPRAYER">
-        <description>A command to request to turn sprayer on or off</description>
+      <entry value="31020" name="MAV_CMD_SET_ALLOW_SPRAY">
+        <description>A command to allow spray</description>
         <param index="1">1 on, 0 off</param>
       </entry>
       <!-- END of user range (31000 to 31999) -->
