@@ -4443,7 +4443,7 @@
       <field type="int8_t" name="countdown">Out of water action countdown (-1: unavailable other: countdown)</field>
     </message>
     <message id="275" name="FMU_SYSTEM_ID">
-      <description>Send water level status to GCS</description>
+      <description>Send FMU system ID to GCS</description>
       <field type="char[40]" name="fmu_system_id">System ID from FMU</field>
     </message>
     <message id="299" name="WIFI_CONFIG_AP">
