@@ -1891,6 +1891,10 @@
         <description>A command to allow spray</description>
         <param index="1">1 on, 0 off</param>
       </entry>
+      <entry value="31021" name="MAV_CMD_REQUEST_SYSTEM_ID">
+        <description>A command to request for system id.</description>
+        <param index="1">nothing need to be filled</param>
+      </entry>
       <!-- END of user range (31000 to 31999) -->
     </enum>
     <enum name="MAV_DATA_STREAM">
@@ -4437,6 +4441,10 @@
       <description>Send water level status to GCS</description>
       <field type="uint8_t" name="water_level">Water level (1: available, 0: unavailable)</field>
       <field type="int8_t" name="countdown">Out of water action countdown (-1: unavailable other: countdown)</field>
+    </message>
+    <message id="275" name="FMU_SYSTEM_ID">
+      <description>Send water level status to GCS</description>
+      <field type="char[40]" name="fmu_system_id">System ID from FMU</field>
     </message>
     <message id="299" name="WIFI_CONFIG_AP">
       <description>Configure AP SSID and Password.</description>
