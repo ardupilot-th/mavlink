@@ -1895,6 +1895,11 @@
         <description>A command to request for system id.</description>
         <param index="1">nothing need to be filled</param>
       </entry>
+      <entry value="31022" name="MAV_CMD_SET_ALLOW_MANUAL_ALTITUDE_CONTROL">
+        <description>A command to allow pilot to control the drone altitude in auto mission.</description>
+        <param index="1">1 enable, 0 disable</param>
+        <param index="2">target altitude in meter</param>
+      </entry>
       <!-- END of user range (31000 to 31999) -->
     </enum>
     <enum name="MAV_DATA_STREAM">
