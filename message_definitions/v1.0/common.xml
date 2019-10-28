@@ -4505,5 +4505,9 @@
       <field type="float[21]" name="pose_covariance">Pose (states: x, y, z, roll, pitch, yaw) covariance matrix upper right triangle (first six entries are the first ROW, next five entries are the second ROW, etc.)</field>
       <field type="float[21]" name="twist_covariance">Twist (states: vx, vy, vz, rollspeed, pitchspeed, yawspeed) covariance matrix upper right triangle (first six entries are the first ROW, next five entries are the second ROW, etc.)</field>
     </message>
+    <message id="800" name="LOG_HGMC_FLIGHT_ID">
+      <description>HGMC message to add to BIN log</description>
+      <field type="char[32]" name="message_to_log">Message to be added to BIN log</field>
+    </message>
   </messages>
 </mavlink>
