@@ -146,6 +146,21 @@
       <entry value="27" name="MAV_TYPE_ADSB">
         <description>Onboard ADSB peripheral</description>
       </entry>
+      <entry value="28" name="MAV_TYPE_PARAFOIL">
+        <description>Steerable, nonrigid airfoil</description>
+      </entry>
+      <entry value="29" name="MAV_TYPE_DODECAROTOR">
+        <description>Dodecarotor</description>
+      </entry>
+      <entry value="30" name="MAV_TYPE_CAMERA">
+        <description>Camera</description>
+      </entry>
+      <entry value="31" name="MAV_TYPE_CHARGING_STATION">
+        <description>Charging station</description>
+      </entry>
+      <entry value="32" name="MAV_TYPE_FLARM">
+        <description>Onboard FLARM collision avoidance system</description>
+      </entry>
     </enum>
     <enum name="FIRMWARE_VERSION_TYPE">
       <description>These values define the type of firmware release.  These values indicate the first version or release of this type.  For example the first alpha release would be 64, the second would be 65.</description>
@@ -3194,6 +3209,7 @@
       <field type="float" name="flow_rate_y" units="rad/s">Flow rate in radians/second about Y axis</field>
     </message>
     <message id="101" name="GLOBAL_VISION_POSITION_ESTIMATE">
+      <description>Global position/attitude estimate from a vision source.</description>
       <field type="uint64_t" name="usec" units="us">Timestamp (microseconds, synced to UNIX time or since system boot)</field>
       <field type="float" name="x" units="m">Global X position</field>
       <field type="float" name="y" units="m">Global Y position</field>
@@ -3203,6 +3219,7 @@
       <field type="float" name="yaw" units="rad">Yaw angle in rad</field>
     </message>
     <message id="102" name="VISION_POSITION_ESTIMATE">
+      <description>Local position/attitude estimate from a vision source.</description>
       <field type="uint64_t" name="usec" units="us">Timestamp (microseconds, synced to UNIX time or since system boot)</field>
       <field type="float" name="x" units="m">Global X position</field>
       <field type="float" name="y" units="m">Global Y position</field>
@@ -3212,12 +3229,14 @@
       <field type="float" name="yaw" units="rad">Yaw angle in rad</field>
     </message>
     <message id="103" name="VISION_SPEED_ESTIMATE">
+      <description>Speed estimate from a vision source.</description>
       <field type="uint64_t" name="usec" units="us">Timestamp (microseconds, synced to UNIX time or since system boot)</field>
       <field type="float" name="x" units="m/s">Global X speed</field>
       <field type="float" name="y" units="m/s">Global Y speed</field>
       <field type="float" name="z" units="m/s">Global Z speed</field>
     </message>
     <message id="104" name="VICON_POSITION_ESTIMATE">
+      <description>Global position estimate from a Vicon motion system source.</description>
       <field type="uint64_t" name="usec" units="us">Timestamp (microseconds, synced to UNIX time or since system boot)</field>
       <field type="float" name="x" units="m">Global X position</field>
       <field type="float" name="y" units="m">Global Y position</field>
@@ -3515,6 +3534,7 @@
       <field type="int16_t" name="zmag" units="mT">Z Magnetic field (milli tesla)</field>
     </message>
     <message id="130" name="DATA_TRANSMISSION_HANDSHAKE">
+      <description>Handshake message to initiate, control and stop image streaming when using the Image Transmission Protocol: https://mavlink.io/en/services/image_transmission.html.</description>
       <field type="uint8_t" name="type">type of requested/acknowledged data (as defined in ENUM DATA_TYPES in mavlink/include/mavlink_types.h)</field>
       <field type="uint32_t" name="size" units="bytes">total data size in bytes (set on ACK only)</field>
       <field type="uint16_t" name="width">Width of a matrix or image</field>
@@ -3524,10 +3544,12 @@
       <field type="uint8_t" name="jpg_quality">JPEG quality out of [1,100]</field>
     </message>
     <message id="131" name="ENCAPSULATED_DATA">
+      <description>Data packet for images sent using the Image Transmission Protocol: https://mavlink.io/en/services/image_transmission.html.</description>
       <field type="uint16_t" name="seqnr">sequence number (starting with 0 on every transmission)</field>
       <field type="uint8_t[253]" name="data">image data bytes</field>
     </message>
     <message id="132" name="DISTANCE_SENSOR">
+      <description>Distance sensor information for an onboard rangefinder.</description>
       <field type="uint32_t" name="time_boot_ms" units="ms">Time since system boot</field>
       <field type="uint16_t" name="min_distance" units="cm">Minimum distance the sensor can measure in centimeters</field>
       <field type="uint16_t" name="max_distance" units="cm">Maximum distance the sensor can measure in centimeters</field>
@@ -3707,6 +3729,7 @@
       <field type="float" name="pos_vert_accuracy" units="m">Vertical position 1-STD accuracy relative to the EKF local origin (m)</field>
     </message>
     <message id="231" name="WIND_COV">
+      <description>Wind covariance estimate from vehicle.</description>
       <field type="uint64_t" name="time_usec" units="us">Timestamp (micros since boot or Unix epoch)</field>
       <field type="float" name="wind_x" units="m/s">Wind in X (NED) direction in m/s</field>
       <field type="float" name="wind_y" units="m/s">Wind in Y (NED) direction in m/s</field>
@@ -3860,6 +3883,7 @@
       <field type="int8_t[32]" name="value">Memory contents at specified address</field>
     </message>
     <message id="250" name="DEBUG_VECT">
+      <description>To debug something using a named 3D vector.</description>
       <field type="char[10]" name="name">Name</field>
       <field type="uint64_t" name="time_usec" units="us">Timestamp</field>
       <field type="float" name="x">x</field>
