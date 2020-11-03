@@ -1899,8 +1899,8 @@
         <description>A command to allow pilot to control the drone altitude in auto mission.</description>
         <param index="1">1 enable, 0 disable</param>
       </entry>
-      <entry value="31023" name="MAV_CMD_SET_ALLOW_OBSTRUCLE_AVOIDANCE">
-        <description>A command to allow drone to avoid the obstrucle.</description>
+      <entry value="31023" name="MAV_CMD_SET_ALLOW_OBSTACLE_AVOIDANCE">
+        <description>A command to allow drone to avoid the obstacle.</description>
         <param index="1">1 enable, 0 disable</param>
       </entry>
       <!-- END of user range (31000 to 31999) -->
