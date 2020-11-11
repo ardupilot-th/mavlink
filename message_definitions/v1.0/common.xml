@@ -4481,6 +4481,10 @@
       <field type="float" name="closest_angle"></field>
       <field type="float" name="closest_dist"></field>
     </message>
+    <message id="277" name="HGR_FS_EVENTS">
+      <description>Send reasoning to GCS before triggering failsafe</description>
+      <field type="uint8_t" name="fs_reason">HGR failsafe status</field>
+    </message>
     <message id="299" name="WIFI_CONFIG_AP">
       <description>Configure AP SSID and Password.</description>
       <field type="char[32]" name="ssid">Name of Wi-Fi network (SSID). Leave it blank to leave it unchanged.</field>
