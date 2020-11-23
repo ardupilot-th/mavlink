@@ -2791,6 +2791,34 @@
         <description>Spektrum DSMX</description>
       </entry>
     </enum>
+    <enum name="ERROR_SUBSYSTEM">
+      <description>These flags indicate error from sub systems status</description>
+      <entry value="1" name="ERROR_SUBSYSTEM_FLAGS_MAIN"/>
+      <entry value="2" name="ERROR_SUBSYSTEM_FLAGS_RADIO"/>
+      <entry value="3" name="ERROR_SUBSYSTEM_FLAGS_COMPASS"/>
+      <entry value="4" name="ERROR_SUBSYSTEM_FLAGS_OPTFLOW"/>
+      <entry value="5" name="ERROR_SUBSYSTEM_FLAGS_FAILSAFE_RADIO"/>
+      <entry value="6" name="ERROR_SUBSYSTEM_FLAGS_FAILSAFE_BATT"/>
+      <entry value="7" name="ERROR_SUBSYSTEM_FLAGS_FAILSAFE_GPS"/>
+      <entry value="8" name="ERROR_SUBSYSTEM_FLAGS_FAILSAFE_GCS"/>
+      <entry value="9" name="ERROR_SUBSYSTEM_FLAGS_FAILSAFE_FENCE"/>
+      <entry value="10" name="ERROR_SUBSYSTEM_FLAGS_FLIGHT_MODE"/>
+      <entry value="11" name="ERROR_SUBSYSTEM_FLAGS_GPS"/>
+      <entry value="12" name="ERROR_SUBSYSTEM_FLAGS_CRASH_CHECK"/>
+      <entry value="13" name="ERROR_SUBSYSTEM_FLAGS_FLIP"/>
+      <entry value="14" name="ERROR_SUBSYSTEM_FLAGS_AUTOTUNE"/>
+      <entry value="15" name="ERROR_SUBSYSTEM_FLAGS_PARACHUTE"/>
+      <entry value="16" name="ERROR_SUBSYSTEM_FLAGS_EKFCHECK"/>
+      <entry value="17" name="ERROR_SUBSYSTEM_FLAGS_FAILSAFE_EKFINAV"/>
+      <entry value="18" name="ERROR_SUBSYSTEM_FLAGS_BARO"/>
+      <entry value="19" name="ERROR_SUBSYSTEM_FLAGS_CPU"/>
+      <entry value="20" name="ERROR_SUBSYSTEM_FLAGS_FAILSAFE_ADSB"/>
+      <entry value="21" name="ERROR_SUBSYSTEM_FLAGS_TERRAIN"/>
+      <entry value="22" name="ERROR_SUBSYSTEM_FLAGS_NAVIGATION"/>
+      <entry value="23" name="ERROR_SUBSYSTEM_FLAGS_FAILSAFE_TERRAIN"/>
+      <entry value="24" name="ERROR_SUBSYSTEM_FLAGS_EKF_PRIMARY"/>
+      <entry value="25" name="ERROR_SUBSYSTEM_FLAGS_FAILSAFE_AVOIDANCE"/>
+    </enum>
   </enums>
   <messages>
     <message id="0" name="HEARTBEAT">
