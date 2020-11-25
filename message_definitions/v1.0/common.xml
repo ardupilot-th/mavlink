@@ -2821,7 +2821,6 @@
     </enum>
     <enum name="FAILSAFE_AVOIDANCE_DEGREE">
       <description>These flags indicate failsafe reason to failsafe</description>
-      <entry value="-1" name="NOT_FOUND"/>
       <entry value="0" name="DEGREE_0"/>
       <entry value="1" name="DEGREE_45"/>
       <entry value="2" name="DEGREE_90"/>
