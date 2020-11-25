@@ -2819,6 +2819,18 @@
       <entry value="24" name="ERROR_SUBSYSTEM_FLAGS_EKF_PRIMARY"/>
       <entry value="25" name="ERROR_SUBSYSTEM_FLAGS_FAILSAFE_AVOIDANCE"/>
     </enum>
+    <enum name="FAILSAFE_AVOIDANCE_DEGREE">
+      <description>These flags indicate error from sub systems status</description>
+      <entry value="-1" name="NOT_FOUND"/>
+      <entry value="0" name="DEGREE_0"/>
+      <entry value="1" name="DEGREE_45"/>
+      <entry value="2" name="DEGREE_90"/>
+      <entry value="3" name="DEGREE_135"/>
+      <entry value="4" name="DEGREE_180"/>
+      <entry value="5" name="DEGREE_225"/>
+      <entry value="6" name="DEGREE_270"/>
+      <entry value="7" name="DEGREE_315"/>
+    </enum>
   </enums>
   <messages>
     <message id="0" name="HEARTBEAT">
@@ -4511,7 +4523,8 @@
     </message>
     <message id="277" name="FAILSAFE_REASON">
       <description>Send reasoning to GCS before triggering failsafe</description>
-      <field type="uint8_t" name="fs_reason">failsafe reason</field>
+      <field type="uint8_t" name="fs_ssy_reason">failsafe subsystem</field>
+      <field type="int16_t" name="addition_reason">addition failsafe reason</field>
     </message>
     <message id="299" name="WIFI_CONFIG_AP">
       <description>Configure AP SSID and Password.</description>
