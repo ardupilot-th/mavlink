@@ -2818,6 +2818,7 @@
       <entry value="23" name="ERROR_SUBSYSTEM_FLAGS_FAILSAFE_TERRAIN"/>
       <entry value="24" name="ERROR_SUBSYSTEM_FLAGS_EKF_PRIMARY"/>
       <entry value="25" name="ERROR_SUBSYSTEM_FLAGS_FAILSAFE_AVOIDANCE"/>
+      <entry value="26" name="ERROR_SUBSYSTEM_FLAGS_FAILSAFE_TANK_SENSOR"/>
     </enum>
     <enum name="FAILSAFE_AVOIDANCE_DEGREE">
       <description>These flags indicate failsafe reason to failsafe</description>
