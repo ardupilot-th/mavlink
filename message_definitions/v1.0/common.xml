@@ -1904,7 +1904,7 @@
         <param index="1">1 enable, 0 disable</param>
       </entry>
       <entry value="31024" name="MAV_CMD_SET_OBSTACLE_LOCATION">
-        <description>Changes the obstacle line segment from and to specified locations.</description>
+        <description>Changes the simulated obstacle line segment from and to specified locations for AP_Proximity_HGR_SITL.</description>
         <param index="1">Latitude of the first point</param>
         <param index="2">Longitude of the first point</param>
         <param index="3">Altitude of the first point</param>
