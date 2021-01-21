@@ -2219,6 +2219,15 @@
         <description>A command to allow pilot to control the drone altitude in auto mission.</description>
         <param index="1">1 enable, 0 disable</param>
       </entry>
+      <entry value="31024" name="MAV_CMD_SET_OBSTACLE_LOCATION">
+        <description>Changes the simulated obstacle line segment from and to specified locations for AP_Proximity_HGR_SITL.</description>
+        <param index="1">Latitude of the first point</param>
+        <param index="2">Longitude of the first point</param>
+        <param index="3">Altitude of the first point</param>
+        <param index="4">Latitude of the second point</param>
+        <param index="5">Longitude of the second point</param>
+        <param index="6">Altitude of the second point</param>
+      </entry>
       <!-- END of user range (31000 to 31999) -->
     </enum>
     <enum name="MAV_DATA_STREAM">
