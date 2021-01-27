@@ -1903,7 +1903,10 @@
         <description>A command to allow drone to avoid the obstacle.</description>
         <param index="1">1 enable, 0 disable</param>
       </entry>
-      <entry value="31024" name="MAV_CMD_ALLOW_TIME">
+      <entry value="31024" name="MAV_CMD_SET_KILL_OBSTACLE_AVOIDANCE">
+        <description>A command to allow drone to kill avoid the obstacle.</description>
+        <param index="1">1 kill avoidance, 0 disable</param>
+      <entry value="31025" name="MAV_CMD_ALLOW_TIME">
         <description>A command to send encrypted data</description>
         <param index="1">bytes 1 to 4</param>
         <param index="2">bytes 5 to 8</param>
@@ -1913,7 +1916,7 @@
         <param index="6">Reserved</param>
         <param index="7">Reserved</param>
       </entry>
-      <entry value="31025" name="MAV_CMD_INITIAL_VECTOR">
+      <entry value="31026" name="MAV_CMD_INITIAL_VECTOR">
         <description>A command to send initialization vector for data decryption</description>
         <param index="1">bytes 1 to 4</param>
         <param index="2">bytes 5 to 8</param>
@@ -1923,7 +1926,7 @@
         <param index="6">Reserved</param>
         <param index="7">Reserved</param>
       </entry>
-      <entry value="31026" name="MAV_CMD_MAGIC_NUM">
+      <entry value="31027" name="MAV_CMD_MAGIC_NUM">
         <description>A command to send magic number for data decryption</description>
         <param index="1">bytes 1 to 4</param>
         <param index="2">Reserved</param>
@@ -4539,7 +4542,8 @@
     <message id="276" name="PRX_DISTANCE">
       <description>Send Proximity Data to GCS</description>
       <field type="uint8_t" name="health"></field>
-      <field type="uint8_t" name="enable"></field>
+      <field type="uint8_t" name="master_enable"></field>
+      <field type="uint8_t" name="system_enable"></field>
       <field type="float" name="dist0"></field>
       <field type="float" name="dist45"></field>
       <field type="float" name="dist90"></field>
