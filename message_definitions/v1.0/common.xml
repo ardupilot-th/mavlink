@@ -1907,7 +1907,16 @@
         <description>A command to allow drone to kill avoid the obstacle.</description>
         <param index="1">1 kill avoidance, 0 disable</param>
       </entry>
-      <entry value="31025" name="MAV_CMD_ALLOW_TIME">
+      <entry value="31025" name="MAV_CMD_SET_OBSTACLE_LOCATION">
+        <description>Changes the simulated obstacle line segment from and to specified locations for AP_Proximity_HGR_SITL.</description>
+        <param index="1">Latitude of the first point</param>
+        <param index="2">Longitude of the first point</param>
+        <param index="3">Altitude of the first point</param>
+        <param index="4">Latitude of the second point</param>
+        <param index="5">Longitude of the second point</param>
+        <param index="6">Altitude of the second point</param>
+      </entry>
+      <entry value="31026" name="MAV_CMD_ALLOW_TIME">
         <description>A command to send encrypted data</description>
         <param index="1">bytes 1 to 4</param>
         <param index="2">bytes 5 to 8</param>
@@ -1917,7 +1926,7 @@
         <param index="6">Reserved</param>
         <param index="7">Reserved</param>
       </entry>
-      <entry value="31026" name="MAV_CMD_INITIAL_VECTOR">
+      <entry value="31027" name="MAV_CMD_INITIAL_VECTOR">
         <description>A command to send initialization vector for data decryption</description>
         <param index="1">bytes 1 to 4</param>
         <param index="2">bytes 5 to 8</param>
@@ -1927,7 +1936,7 @@
         <param index="6">Reserved</param>
         <param index="7">Reserved</param>
       </entry>
-      <entry value="31027" name="MAV_CMD_MAGIC_NUM">
+      <entry value="31028" name="MAV_CMD_MAGIC_NUM">
         <description>A command to send magic number for data decryption</description>
         <param index="1">bytes 1 to 4</param>
         <param index="2">Reserved</param>
@@ -1936,15 +1945,6 @@
         <param index="5">Reserved</param>
         <param index="6">Reserved</param>
         <param index="7">Reserved</param>
-      </entry>
-      <entry value="31028" name="MAV_CMD_SET_OBSTACLE_LOCATION">
-        <description>Changes the simulated obstacle line segment from and to specified locations for AP_Proximity_HGR_SITL.</description>
-        <param index="1">Latitude of the first point</param>
-        <param index="2">Longitude of the first point</param>
-        <param index="3">Altitude of the first point</param>
-        <param index="4">Latitude of the second point</param>
-        <param index="5">Longitude of the second point</param>
-        <param index="6">Altitude of the second point</param>
       </entry>
       <!-- END of user range (31000 to 31999) -->
     </enum>
