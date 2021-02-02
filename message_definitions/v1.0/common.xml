@@ -1907,6 +1907,25 @@
         <description>A command to allow drone to kill avoid the obstacle.</description>
         <param index="1">1 kill avoidance, 0 activate avoidance</param>
       </entry>
+      <entry value="31025" name="MAV_CMD_SET_AB_RESUME_POINT">
+        <description>Set AB point location either to the current location or a specified location.</description>
+        <param index="1">Use current (1=use current location, 0=use specified location)</param>
+        <param index="2">A or B or Resume point (0=A, 1=B, 2=Resume)</param>
+        <param index="3">Empty</param>
+        <param index="4">Empty</param>
+        <param index="5">Latitude</param>
+        <param index="6">Longitude</param>
+        <param index="7">Empty</param>
+      </entry>
+      <entry value="31026" name="MAV_CMD_START_OR_RESUME_AB">
+        <description></description>
+        <param index="1">Start or pause(1-start/resume, 0-pause)</param>
+        <param index="2">Line Direction relative to drone heading(0-Right,1-Left,2-continue)-only valid when the direction is not chosen yet</param>
+      </entry>
+      <entry value="31027" name="MAV_CMD_RESET_AB">
+        <description></description>
+        <param index="1">Reset(must be 1 to request reset)</param>
+      </entry>
       <!-- END of user range (31000 to 31999) -->
     </enum>
     <enum name="MAV_DATA_STREAM">
@@ -2834,6 +2853,25 @@
       <entry value="5" name="DEGREE_225"/>
       <entry value="6" name="DEGREE_270"/>
       <entry value="7" name="DEGREE_315"/>
+    </enum>
+    <enum name="AB_STAGE">
+      <description>stage of AB mode</description>
+      <entry value="0" name="STORING_POINTS_A"/>
+      <entry value="1" name="STORING_POINTS_B"/>
+      <entry value="2" name="WAIT_LEFT_OR_RIGHT"/>
+      <entry value="3" name="STARTING_AUTO"/>
+      <entry value="4" name="AB_AUTO"/>
+      <entry value="5" name="AUTO_MANUAL"/>
+      <entry value="6" name="AUTO_SHORTEN"/>
+      <entry value="7" name="AUTO_EXTEND"/>
+      <entry value="8" name="MANUAL_REGAIN"/>
+    </enum>
+    <enum name="AB_AUTO_STAGE">
+      <description>stage of auto moving segment in AB mode</description>
+      <entry value="0" name="AUTO_NOSPRAY_TO_B"/>
+      <entry value="1" name="AUTO_SPRAY_TO_A"/>
+      <entry value="2" name="AUTO_NOSPRAY_TO_A"/>
+      <entry value="3" name="AUTO_SPRAY_TO_B"/>
     </enum>
   </enums>
   <messages>
@@ -4530,6 +4568,18 @@
       <description>Send reasoning to GCS before triggering failsafe</description>
       <field type="uint8_t" name="fs_ssy_reason">failsafe subsystem</field>
       <field type="int16_t" name="addition_reason">addition failsafe reason</field>
+    </message>
+    <message id="278" name="AB_MODE_STATUS">
+      <description>Send AB mode Data to GCS</description>
+      <field type="uint8_t" name="ab_stage" enum="AB_STAGE">AB mode stage (0..9)</field>
+      <field type="uint8_t" name="ab_auto_stage" enum="AB_AUTO_STAGE">AB mode auto stage (0..3)</field>
+      <field type="uint8_t" name="ab_moving_dir">moving direction (0-Right,1-Left)</field>
+      <field type="int32_t" name="dest_A_lat" units="degE7">A Latitude, expressed as degrees * 1E7</field>
+      <field type="int32_t" name="dest_A_lon" units="degE7">A Longitude, expressed as degrees * 1E7</field>
+      <field type="int32_t" name="dest_B_lat" units="degE7">B Latitude, expressed as degrees * 1E7</field>
+      <field type="int32_t" name="dest_B_lon" units="degE7">B Longitude, expressed as degrees * 1E7</field> 
+      <field type="int32_t" name="curr_dest_lat" units="degE7">Current destination Latitude, expressed as degrees * 1E7</field>
+      <field type="int32_t" name="curr_dest_lon" units="degE7">Current destination Longitude, expressed as degrees * 1E7</field>    
     </message>
     <message id="299" name="WIFI_CONFIG_AP">
       <description>Configure AP SSID and Password.</description>
