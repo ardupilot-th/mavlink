@@ -1916,6 +1916,16 @@
         <param index="5">Longitude of the second point</param>
         <param index="6">Altitude of the second point</param>
       </entry>
+      <entry value="31026" name="MAV_CMD_ALLOW_TIME">
+        <description>A command to send encrypted data</description>
+        <param index="1">allow time 1</param>
+        <param index="2">allow time 2</param>
+        <param index="3">allow time 3</param>
+        <param index="4">allow time 4</param>
+        <param index="5">initialization vector 1</param>
+        <param index="6">initialization vector 2</param>
+        <param index="7">HGR magic number</param>
+      </entry>
       <!-- END of user range (31000 to 31999) -->
     </enum>
     <enum name="MAV_DATA_STREAM">
