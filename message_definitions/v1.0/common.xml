@@ -1918,33 +1918,13 @@
       </entry>
       <entry value="31026" name="MAV_CMD_ALLOW_TIME">
         <description>A command to send encrypted data</description>
-        <param index="1">bytes 1 to 4</param>
-        <param index="2">bytes 5 to 8</param>
-        <param index="3">bytes 9 to 12</param>
-        <param index="4">bytes 13 to 16</param>
-        <param index="5">Reserved</param>
-        <param index="6">Reserved</param>
-        <param index="7">Reserved</param>
-      </entry>
-      <entry value="31027" name="MAV_CMD_INITIAL_VECTOR">
-        <description>A command to send initialization vector for data decryption</description>
-        <param index="1">bytes 1 to 4</param>
-        <param index="2">bytes 5 to 8</param>
-        <param index="3">bytes 9 to 12</param>
-        <param index="4">bytes 13 to 16</param>
-        <param index="5">Reserved</param>
-        <param index="6">Reserved</param>
-        <param index="7">Reserved</param>
-      </entry>
-      <entry value="31028" name="MAV_CMD_MAGIC_NUM">
-        <description>A command to send magic number for data decryption</description>
-        <param index="1">bytes 1 to 4</param>
-        <param index="2">Reserved</param>
-        <param index="3">Reserved</param>
-        <param index="4">Reserved</param>
-        <param index="5">Reserved</param>
-        <param index="6">Reserved</param>
-        <param index="7">Reserved</param>
+        <param index="1">allow time 1</param>
+        <param index="2">allow time 2</param>
+        <param index="3">allow time 3</param>
+        <param index="4">allow time 4</param>
+        <param index="5">initialization vector 1</param>
+        <param index="6">initialization vector 2</param>
+        <param index="7">HGR magic number</param>
       </entry>
       <!-- END of user range (31000 to 31999) -->
     </enum>
@@ -2873,6 +2853,17 @@
       <entry value="5" name="DEGREE_225"/>
       <entry value="6" name="DEGREE_270"/>
       <entry value="7" name="DEGREE_315"/>
+    </enum>
+    <enum name="ALLOW_TIME_ID">
+      <description>These flags indicate allow time id</description>
+      <entry value="0" name="ALLOW_TIME_PASS"/>
+      <entry value="1" name="ALLOW_TIME_FAIL"/>
+      <entry value="2" name="ALLOW_TIME_CRC_PASS"/>
+      <entry value="3" name="ALLOW_TIME_CRC_FAIL"/>
+      <entry value="4" name="ALLOW_TIME_BUFFER_EMPTY"/>
+      <entry value="5" name="ALLOW_TIME_GET_SYS_ID_FAIL"/>
+      <entry value="6" name="ALLOW_TIME_SET_KEY_FAIL"/>
+      <entry value="7" name="ALLOW_TIME_DECRYPT_FAIL"/>
     </enum>
   </enums>
   <messages>
