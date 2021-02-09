@@ -2854,6 +2854,17 @@
       <entry value="6" name="DEGREE_270"/>
       <entry value="7" name="DEGREE_315"/>
     </enum>
+    <enum name="ALLOW_TIME_ID">
+      <description>These flags indicate allow time id</description>
+      <entry value="0" name="ALLOW_TIME_PASS"/>
+      <entry value="1" name="ALLOW_TIME_FAIL"/>
+      <entry value="2" name="ALLOW_TIME_CRC_PASS"/>
+      <entry value="3" name="ALLOW_TIME_CRC_FAIL"/>
+      <entry value="4" name="ALLOW_TIME_BUFFER_EMPTY"/>
+      <entry value="5" name="ALLOW_TIME_GET_SYS_ID_FAIL"/>
+      <entry value="6" name="ALLOW_TIME_SET_KEY_FAIL"/>
+      <entry value="7" name="ALLOW_TIME_DECRYPT_FAIL"/>
+    </enum>
   </enums>
   <messages>
     <message id="0" name="HEARTBEAT">
@@ -4549,6 +4560,11 @@
       <description>Send reasoning to GCS before triggering failsafe</description>
       <field type="uint8_t" name="fs_ssy_reason">failsafe subsystem</field>
       <field type="int16_t" name="addition_reason">addition failsafe reason</field>
+    </message>
+    <message id="278" name="ALLOW_TIME">
+      <description>Send feedback allow time to HGMC</description>
+      <field type="uint8_t" name="allow_time_id">allow time id</field>
+      <field type="uint32_t" name="addition_reason">addition failsafe reason</field>
     </message>
     <message id="299" name="WIFI_CONFIG_AP">
       <description>Configure AP SSID and Password.</description>
