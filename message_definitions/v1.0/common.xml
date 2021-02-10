@@ -1939,7 +1939,7 @@
       <entry value="31028" name="MAV_CMD_START_OR_RESUME_AB">
         <description></description>
         <param index="1">Start or pause(1-start/resume, 0-pause)</param>
-        <param index="2">Line Direction relative to drone heading(0-Right,1-Left,2-continue)-only valid when the direction is not chosen yet</param>
+        <param index="2">Line Direction relative to Vector A->B(0-Right,1-Left,2-continue)-only valid when the direction is not chosen yet</param>
       </entry>
       <entry value="31029" name="MAV_CMD_RESET_AB">
         <description></description>
