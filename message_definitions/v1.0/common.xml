@@ -4561,6 +4561,11 @@
       <field type="uint8_t" name="fs_ssy_reason">failsafe subsystem</field>
       <field type="int16_t" name="addition_reason">addition failsafe reason</field>
     </message>
+    <message id="278" name="ALLOW_TIME">
+      <description>Send feedback allow time to HGMC</description>
+      <field type="uint8_t" name="allow_time_id">allow time id</field>
+      <field type="uint32_t" name="addition_reason">addition failsafe reason</field>
+    </message>
     <message id="299" name="WIFI_CONFIG_AP">
       <description>Configure AP SSID and Password.</description>
       <field type="char[32]" name="ssid">Name of Wi-Fi network (SSID). Leave it blank to leave it unchanged.</field>
