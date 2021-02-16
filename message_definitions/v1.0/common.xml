@@ -2889,12 +2889,12 @@
       <entry value="0" name="STORING_POINTS_A"/>
       <entry value="1" name="STORING_POINTS_B"/>
       <entry value="2" name="WAIT_LEFT_OR_RIGHT"/>
-      <entry value="3" name="STARTING_AUTO"/>
-      <entry value="4" name="AB_AUTO"/>
-      <entry value="5" name="AUTO_MANUAL"/>
-      <entry value="6" name="AUTO_SHORTEN"/>
-      <entry value="7" name="AUTO_EXTEND"/>
-      <entry value="8" name="MANUAL_REGAIN"/>
+      <entry value="3" name="MANUAL_REGAIN"/>
+      <entry value="4" name="STARTING_AUTO"/>
+      <entry value="5" name="AB_AUTO"/>
+      <entry value="6" name="AUTO_MANUAL"/>
+      <entry value="7" name="AUTO_SHORTEN"/>
+      <entry value="8" name="AUTO_EXTEND"/>
     </enum>
     <enum name="AB_AUTO_STAGE">
       <description>stage of auto moving segment in AB mode</description>
