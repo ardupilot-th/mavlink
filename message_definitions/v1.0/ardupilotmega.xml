@@ -1149,7 +1149,6 @@
       <field type="float" name="xgyro" units="rad/s">Angular speed around X axis rad/s</field>
       <field type="float" name="ygyro" units="rad/s">Angular speed around Y axis rad/s</field>
       <field type="float" name="zgyro" units="rad/s">Angular speed around Z axis rad/s</field>
-      <field type="float" name="alt" units="m">Altitude (MSL) in meters</field>
       <field type="int32_t" name="lat" units="degE7">Latitude in degrees * 1E7</field>
       <field type="int32_t" name="lng" units="degE7">Longitude in degrees * 1E7</field>
     </message>
